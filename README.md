@@ -48,3 +48,7 @@ You can generate TypeScript types for your PocketBase collections:
 ```bash
 bun run typegen
 ```
+
+## 🧩 Extending PocketBase
+
+PocketBase in this starter acts as a [**backend framework**](https://pocketbase.io/docs/use-as-framework/), not just a database. You can easily extend it [using Go](https://pocketbase.io/docs/go-overview/) or [using JavaScript](https://pocketbase.io/docs/js-overview/).
