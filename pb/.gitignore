@@ -1,0 +1,7 @@
+/.cache
+/.config
+/*.zip
+/pb_data
+/tmp
+/pocketbase
+/pocketbase.exe
