@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "pocketbase-typegen": "^1.3.1"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n SV,PB -c green,blue \"npm run dev:fe\" \"npm run dev:be\"",
+    "dev:fe": "npm --workspace=sv run dev",
+    "dev:be": "cd pb && modd",
+    "build": "concurrently -n SVELTEKIT,POCKETBASE -c green,blue \"npm run dev:fe\" \"npm run dev:be\"",
+    "build:fe": "npm --workspace=sv run build",
+    "build:be": "cd pb && go build",
+    "typegen": "pocketbase-typegen --db pb/pb_data/data.db --out sv/src/lib/pocketbase/generated-types.ts"
+  },
+  "workspaces": [
+    "sv"
+  ]
+}
